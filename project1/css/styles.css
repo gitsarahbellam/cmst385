@@ -1,0 +1,13 @@
+body {
+  background-color: seashell;
+}
+h1 {
+  color: black;
+  font-family: verdana;
+  font-size: 400%;
+}
+h2 {
+  color: blue;
+  font-family: arial;
+  font-size: 150%;
+}

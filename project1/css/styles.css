@@ -3,11 +3,11 @@ body {
 }
 h1 {
   color: black;
-  font-family: arial;
+  font-family: verdana;
   font-size: 400%;
 }
 h2 {
   color: blue;
-  font-family: verdana;
+  font-family: arial;
   font-size: 150%;
 }

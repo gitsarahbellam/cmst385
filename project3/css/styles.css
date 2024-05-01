@@ -6,7 +6,6 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 p.a {
@@ -33,6 +32,12 @@ p.italic {
   font-weight: normal;
 }
 
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -47,13 +52,18 @@ p.italic {
 }
 
 .flex-item-right {
-  background-color: dodgerblue;
+  background-color: #dddddd;
   padding: 10px;
   flex: 50%;
 }
 
 .flex-cap {
   font-size: 8px;
+}
+
+.flex-article {
+  font-size: 15px;
+  text-align: justify;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */

@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs26 \cf0 if (document.readyState == 'loading') \{\
+\'a0\'a0\'a0\'a0document.addEventListener('DOMContentLoaded', ready)\
+\} else \{\
+\'a0\'a0\'a0\'a0ready()\
+\}\
+\
+function ready() \{\
+\'a0\'a0\'a0\'a0var removeCartItemButtons = document.getElementsByClassName('btn-danger')\
+\'a0\'a0\'a0\'a0for (var i = 0; i < removeCartItemButtons.length; i++) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var button = removeCartItemButtons[i]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0button.addEventListener('click', removeCartItem)\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0var quantityInputs = document.getElementsByClassName('cart-quantity-input')\
+\'a0\'a0\'a0\'a0for (var i = 0; i < quantityInputs.length; i++) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var input = quantityInputs[i]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0input.addEventListener('change', quantityChanged)\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0var addToCartButtons = document.getElementsByClassName('shop-item-button')\
+\'a0\'a0\'a0\'a0for (var i = 0; i < addToCartButtons.length; i++) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var button = addToCartButtons[i]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0button.addEventListener('click', addToCartClicked)\
+\'a0\'a0\'a0\'a0\}\
+\
+\'a0\'a0\'a0\'a0document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)\
+\}\
+\
+function purchaseClicked() \{\
+\'a0\'a0\'a0\'a0alert('Thank you for your purchase')\
+\'a0\'a0\'a0\'a0var cartItems = document.getElementsByClassName('cart-items')[0]\
+\'a0\'a0\'a0\'a0while (cartItems.hasChildNodes()) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0cartItems.removeChild(cartItems.firstChild)\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0updateCartTotal()\
+\}\
+\
+function removeCartItem(event) \{\
+\'a0\'a0\'a0\'a0var buttonClicked = event.target\
+\'a0\'a0\'a0\'a0buttonClicked.parentElement.parentElement.remove()\
+\'a0\'a0\'a0\'a0updateCartTotal()\
+\}\
+\
+function quantityChanged(event) \{\
+\'a0\'a0\'a0\'a0var input = event.target\
+\'a0\'a0\'a0\'a0if (isNaN(input.value) || input.value <= 0) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0input.value = 1\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0updateCartTotal()\
+\}\
+\
+function addToCartClicked(event) \{\
+\'a0\'a0\'a0\'a0var button = event.target\
+\'a0\'a0\'a0\'a0var shopItem = button.parentElement.parentElement\
+\'a0\'a0\'a0\'a0var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText\
+\'a0\'a0\'a0\'a0var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText\
+\'a0\'a0\'a0\'a0var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src\
+\'a0\'a0\'a0\'a0addItemToCart(title, price, imageSrc)\
+\'a0\'a0\'a0\'a0updateCartTotal()\
+\}\
+\
+function addItemToCart(title, price, imageSrc) \{\
+\'a0\'a0\'a0\'a0var cartRow = document.createElement('div')\
+\'a0\'a0\'a0\'a0cartRow.classList.add('cart-row')\
+\'a0\'a0\'a0\'a0var cartItems = document.getElementsByClassName('cart-items')[0]\
+\'a0\'a0\'a0\'a0var cartItemNames = cartItems.getElementsByClassName('cart-item-title')\
+\'a0\'a0\'a0\'a0for (var i = 0; i < cartItemNames.length; i++) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if (cartItemNames[i].innerText == title) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0alert('This item is already added to the cart')\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0var cartRowContents = `\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<div class="cart-item cart-column">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<img class="cart-item-image" src="$\{imageSrc\}" width="100" height="100">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<span class="cart-item-title">$\{title\}</span>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0</div>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<span class="cart-price cart-column">$\{price\}</span>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<div class="cart-quantity cart-column">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<input class="cart-quantity-input" type="number" value="1">\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0<button class="btn btn-danger" type="button">REMOVE</button>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0</div>`\
+\'a0\'a0\'a0\'a0cartRow.innerHTML = cartRowContents\
+\'a0\'a0\'a0\'a0cartItems.append(cartRow)\
+\'a0\'a0\'a0\'a0cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)\
+\'a0\'a0\'a0\'a0cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)\
+\}\
+\
+function updateCartTotal() \{\
+\'a0\'a0\'a0\'a0var cartItemContainer = document.getElementsByClassName('cart-items')[0]\
+\'a0\'a0\'a0\'a0var cartRows = cartItemContainer.getElementsByClassName('cart-row')\
+\'a0\'a0\'a0\'a0var total = 0\
+\'a0\'a0\'a0\'a0for (var i = 0; i < cartRows.length; i++) \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var cartRow = cartRows[i]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var priceElement = cartRow.getElementsByClassName('cart-price')[0]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var price = parseFloat(priceElement.innerText.replace('$', ''))\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var quantity = quantityElement.value\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0total = total + (price * quantity)\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0total = Math.round(total * 100) / 100\
+\'a0\'a0\'a0\'a0document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total\
+\}}

@@ -28,18 +28,18 @@ a:hover {
 }
 
 .header-img1 {
-  background-image: url("/imgs/dockweilercropped.jpg");
-  background-color: #199319;
+  background-image: url("/imgs/dockweilercropped.jpeg");
+  background-color: #4CAF50;
 }
 
 .header-img2 {
-  background-image: url("/imgs/IMG_4006.png");
-  background-color: #199319;
+  background-image: url("/imgs/IMG_4006.jpeg");
+  background-color: #4CAF50;
 }
 
 .header-img3 {
-  background-image: url("/imgs/manhattanbeachpiercropped.png");
-  background-color: #199319;
+  background-image: url("/imgs/manhattanbeachpiercropped.jpeg");
+  background-color: #4CAF50;
 }
 
 
@@ -52,17 +52,17 @@ a:hover {
 }
 
 .column-card1 {
-  background-image: url(/imgs/gallery1/texture-02674.jpg);
+  background-image: url(/imgs/gallery1/texture-02674.jpeg);
   height: 300px;
 }
 
 .column-card2 {
-  background-image: url(/imgs/gallery2/pip.png);
+  background-image: url(/imgs/gallery2/pip.jpeg);
   height: 300px;
 }
 
 .column-card3 {
-  background-image: url(/imgs/gallery2/IMG_1703.png);
+  background-image: url(/imgs/gallery2/IMG_1703.jpeg);
   height: 300px;
 }
 

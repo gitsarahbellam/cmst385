@@ -28,15 +28,18 @@ a:hover {
 }
 
 .header-img1 {
-  background-image: url('/imgs/dockweilercropped.jpg');
+  background-image: url("/imgs/dockweilercropped.jpg");
+  background-color: #199319;
 }
 
 .header-img2 {
-  background-image: url('/imgs/IMG_4006.png');
+  background-image: url("/imgs/IMG_4006.png");
+  background-color: #199319;
 }
 
 .header-img3 {
-  background-image: url('/imgs/manhattanbeachpiercropped.png');
+  background-image: url("/imgs/manhattanbeachpiercropped.png");
+  background-color: #199319;
 }
 
 

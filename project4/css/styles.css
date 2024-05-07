@@ -19,6 +19,35 @@ a:hover {
   color: #4CAF50;
 }
 
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
 /* Style the header */
 .header {
     background-color: #f1f1f1;
@@ -27,16 +56,19 @@ a:hover {
     font-size: 35px;
 }
 
+/* My image hosted on another site already published */
 .header-img1 {
   background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/manhattanbeachpiercropped.jpg);
   background-color: #4CAF50;
 }
 
+/* My image hosted on another site already published */
 .header-img2 {
   background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/IMG_3927.jpg);
   background-color: #4CAF50;
 }
 
+/* My image hosted on another site already published */
 .header-img3 {
   background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/dockweilercropped.jpg);
   background-color: #4CAF50;
@@ -57,29 +89,9 @@ a:hover {
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 200px;
-    padding: 10x;
-    background-color:#aaa;
-    margin: 5px;
+    width: 33.3%;
+    padding: 10px;
     background-repeat: no-repeat;
-}
-
-.column-card1 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/aboutme.jpg);
-  height: 300px;
-  display: block;
-}
-
-.column-card2 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/TotalFilmBookCoverVDavisthumb.png);
-  height: 300px;
-  display: block;
-}
-
-.column-card3 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/IMG_0268thumb.jpeg);
-  height: 300px;
-  display: block;
 }
 
 /* Clear floats after the columns */
@@ -95,7 +107,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
   }

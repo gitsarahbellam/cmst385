@@ -65,19 +65,19 @@ a:hover {
 }
 
 .column-card1 {
-  background-image: url(/imgs/aboutme.jpg);
+  background-image: url('/imgs/aboutme.jpg');
   height: 300px;
   display: block;
 }
 
 .column-card2 {
-  background-image: url(/imgs/projects/TotalFilmBookCoverVDavisthumb.png);
+  background-image: url('/imgs/projects/TotalFilmBookCoverVDavisthumb.png');
   height: 300px;
   display: block;
 }
 
 .column-card3 {
-  background-image: url(/imgs/gallery2/IMG_0268thumb.jpeg);
+  background-image: url('/imgs/gallery2/IMG_0268thumb.jpeg');
   height: 300px;
   display: block;
 }

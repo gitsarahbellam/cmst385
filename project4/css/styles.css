@@ -1,311 +1,65 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/sticky.js" async></script>
+    <title>Rachel Lewis | Home</title>
+    <meta name="description" content="This is the online portfoliio created for soley for educational 
+        purposes for a CMST 385 class project.">
+</head>
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+<body>
 
-a {
-  color:#333333;
-}
+    <div class="header header-img1">
+        <h2>Rachel Lewis</h2>
+      </div>
 
-a:visited {
-  color: rgb(226, 233, 227);
-}
+    <ul id="navbar">
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li style="float:right"><a href="about.html#contact">Contact Me</a></li>
+      </ul>
 
-a:hover {
-  color: #4CAF50;
-}
+    <div>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Welcome to my online portfolio.  Please click on one of the images below to view Biography, Projects, and Gallery.</p>
+    </div>
 
+    <!-- Home Cards -->
+    <div class="row center">
+        <div class="column gallery center">
+            <h2>Biography</h2>
+            <a target="_blank" href="/about.html">
+            <img src="https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/aboutme.jpg" alt="About Me Thumbnail"></a>
+            <div class="desc">Click on the thumbnail above to learn more about me.</div>
+        </div>
 
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+        <div class="column gallery center">
+            <h2>Projects</h2>
+            <a target="_blank" href="/projects.html">
+            <img src="imgs/projects/TotalFilmBookCoverVDavisthumb.png" alt="Projects Thumbnail"></a>
+            <div class="desc">Click on the thumbnail above to view my projects.</div>
+        </div>
 
-/* Navbar links */
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
+        <div class="column gallery center">
+            <h2>Gallery</h2>
+            <a target="_blank" href="/gallery.html">
+            <img src="imgs/gallery2/IMG_0268thumb.jpeg" alt="Gallery Thumbnail"></a>
+            <div class="desc">Click on the thumbnail above to view my photo gallery.</div>
+        </div>
+    </div>
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+    <div class="footer">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html#contact">Contact Me</a>
+    </div>
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-}
-
-/* My image hosted on another site already published */
-.header-img1 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/manhattanbeachpiercropped.jpg);
-  background-color: #4CAF50;
-}
-
-/* My image hosted on another site already published */
-.header-img2 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/IMG_3927.jpg);
-  background-color: #4CAF50;
-}
-
-/* My image hosted on another site already published */
-.header-img3 {
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/dockweilercropped.jpg);
-  background-color: #4CAF50;
-}
-
-.center {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-
-.center-proj {
-  margin: auto;
-  width: 100%;
-  text-align: center;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 33.3%;
-    padding: 10px;
-    background-repeat: no-repeat;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: sticky;
-    top: 0;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
-
-/* Style the content */
-.content {
-    background-color: #ddd;
-    padding: 10px;
-  }
-
-/* Style the footer */
-.footer {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .column {
-    width: 100%;
-    }
-}
-
-.parallax {
-  /* The image used */
-  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/dockwielerbeach.jpg);
-
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Image Card */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-  border-radius: 5px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-img {
-  border-radius: 4px;
-}
-
-.container-card {
-  padding: 2px 16px;
-}
-
-.contact-btn:hover {
-  background-color: #333333;
-}
-
-/* Responsive Gallery */
-div.gallery {
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-  width: 300px; 
-  height: auto;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* ID Card */
-.card-id {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 350px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-  background-color: #f2f2f2;
-  border-radius: 4px;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: #333333;
-  background-color: #199319;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-  border-radius: 4px;
-}
-
-/*ID Card Contact Button */
-.contact-btn {
-  background-color: #199319;
-  color: white;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-/* Contact Form */
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  margin-top: 6px; 
-  margin-bottom: 16px; 
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-iframe.border {
-  border:none;
-}
+</body>
+</html>

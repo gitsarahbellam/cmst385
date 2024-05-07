@@ -7,6 +7,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p.a {
+  font-style: oblique;
+}
+
 a {
   color:#333333;
 }
@@ -18,7 +22,6 @@ a:visited {
 a:hover {
   color: #4CAF50;
 }
-
 
 /* Style the navbar */
 #navbar {
@@ -218,7 +221,7 @@ div.desc {
 .responsive {
   padding: 0 6px;
   float: left;
-  width: 24.99999%;
+  width: 25%;
 }
 
 @media only screen and (max-width: 700px) {

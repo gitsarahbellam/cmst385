@@ -42,27 +42,40 @@ a:hover {
   background-color: #4CAF50;
 }
 
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.center-proj {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
 
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.33%;
-    padding: 10px;
+    width: 200px;
+    padding: 10x;
     background-color:#aaa;
+    margin: 5px;
+    background-repeat: no-repeat;
 }
 
 .column-card1 {
-  background-image: url(/imgs/gallery1/texture-02674.jpeg);
+  background-image: url(/imgs/aboutme.jpg);
   height: 300px;
 }
 
 .column-card2 {
-  background-image: url(/imgs/gallery2/pip.jpeg);
+  background-image: url(/imgs/projects/TotalFilmBookCoverVDavisthumb.png);
   height: 300px;
 }
 
 .column-card3 {
-  background-image: url(/imgs/gallery2/IMG_1703.jpeg);
+  background-image: url(/imgs/gallery2/IMG_0268thumb.jpeg);
   height: 300px;
 }
 
@@ -277,4 +290,8 @@ input[type=submit] {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+iframe.border {
+  border:none;
 }

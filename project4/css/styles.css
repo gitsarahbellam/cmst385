@@ -28,12 +28,12 @@ a:hover {
 }
 
 .header-img1 {
-  background-image: url(imgs/aboutme.jpg);
+  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/manhattanbeachpiercropped.jpg);
   background-color: #4CAF50;
 }
 
 .header-img2 {
-  background-image: url(imgs/IMG_4006.jpg);
+  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/IMG_3927.jpg);
   background-color: #4CAF50;
 }
 
@@ -65,19 +65,19 @@ a:hover {
 }
 
 .column-card1 {
-  background-image: url(/imgs/aboutme.jpg);
+  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/aboutme.jpg);
   height: 300px;
   display: block;
 }
 
 .column-card2 {
-  background-image: url(/imgs/projects/TotalFilmBookCoverVDavisthumb.png);
+  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/TotalFilmBookCoverVDavisthumb.png);
   height: 300px;
   display: block;
 }
 
 .column-card3 {
-  background-image: url(/imgs/gallery2/IMG_0268thumb.jpeg);
+  background-image: url(https://img1.wsimg.com/isteam/ip/d6b9f1ca-edb7-47f3-8897-fa6ca6463ff3/IMG_0268thumb.jpeg);
   height: 300px;
   display: block;
 }

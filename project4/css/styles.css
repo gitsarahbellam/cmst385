@@ -28,7 +28,7 @@ a:hover {
 }
 
 .header-img1 {
-  background-image: url("/imgs/dockweilercropped.jpeg");
+  background-image: url('../imgs/dockweilercropped.jpeg);
   background-color: #4CAF50;
 }
 

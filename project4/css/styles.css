@@ -65,7 +65,7 @@ a:hover {
 }
 
 .column-card1 {
-  background-image: url('/imgs/aboutme.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcR8Oytq1aOdKp8GpVdNTLPN2-rl_uq4bft4_TjG9WUzvtT2-WJlQXZFOuzpmklzm2qCE4qUTnjLNe971ys');
   height: 300px;
   display: block;
 }

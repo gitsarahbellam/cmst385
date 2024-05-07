@@ -28,17 +28,17 @@ a:hover {
 }
 
 .header-img1 {
-  background-image: url('../imgs/dockweilercropped.jpeg')
+  background-image: url(imgs/aboutme.jpg);
   background-color: #4CAF50;
 }
 
 .header-img2 {
-  background-image: url("/imgs/IMG_4006.jpeg");
+  background-image: url(imgs/IMG_4006.jpg);
   background-color: #4CAF50;
 }
 
 .header-img3 {
-  background-image: url("/imgs/manhattanbeachpiercropped.jpeg");
+  background-image: url(imgs/manhattanbeachpiercropped.jpg);
   background-color: #4CAF50;
 }
 

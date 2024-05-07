@@ -23,6 +23,12 @@ a:hover {
   color: #4CAF50;
 }
 
+table {
+  border: 1px solid;
+  padding: 35px;
+  background-color: #4CAF50;
+}
+
 /* Style the navbar */
 #navbar {
   overflow: hidden;
